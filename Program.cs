@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace TechStore
 {
@@ -6,7 +8,9 @@ namespace TechStore
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var dataStore = new DataStore("../../..");
+            var view = new View(dataStore);
+            view.InitMenu();
         }
     }
 }
